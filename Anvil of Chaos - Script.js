@@ -652,6 +652,12 @@ function clickWea(checkId) {
       for (i = 0; i < thMs.length; i++) {document.getElementById(thMs[i]).disabled = true;};
       for (i = 0; i < shis.length; i++) {document.getElementById(shis[i]).disabled = true;};
       //resetSecondOneHW();
+      rows = document.getElementById("meleeWeaTable").getElementsByTagName("tr");
+      dblAtt = rows[1].cells[2].innerHTML;
+      rows[1].cells[2].innerHTML = parseInt(dblAtt) * 2;
+      rows = document.getElementById("meleeWeaTablePre").getElementsByTagName("tr");
+      dblAtt = rows[1].cells[2].innerHTML;
+      rows[1].cells[2].innerHTML = parseInt(dblAtt) * 2;
       text = weaChTxt(2);  // text = "  2 of the same one-handed melee weapon & a ranged weapon.";
       break;
     case "0-010100":  //  2 of the same one-handed melee weapon & a ranged weapon.
