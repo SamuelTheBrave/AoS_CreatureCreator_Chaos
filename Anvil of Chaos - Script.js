@@ -705,7 +705,8 @@ function clickWea(checkId) {
       text = weaChTxt(4);  //text = "  1 two-handed melee weapon. & a ranged weapon.";
       break;
     case "0-100100":  //  1 Handbow and 1 one-handed melee weapon.
-      weaSwitch(ohWs)  // ohWs
+      //weaSwitch(ohWs)  // ohWs
+      for (i = 0; i < ohWs.length; i++) {document.getElementById(ohWs[i]).disabled = false;};
       for (i = 0; i < oh2s.length; i++) {document.getElementById(oh2s[i]).disabled = false;};
       for (i = 0; i < thWs.length; i++) {document.getElementById(thWs[i]).disabled = true;};
       weaSwitch(ohMs)  // ohMs      
